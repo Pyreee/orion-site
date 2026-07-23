@@ -45,6 +45,10 @@ body {
   color: var(--fg);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.55;
+  /* Rete di sicurezza: se mai un testo risultasse più largo del suo
+     contenitore (parola lunga, font di sistema più largo, zoom estremo),
+     va a capo invece di sparire o creare uno scroll orizzontale. */
+  overflow-wrap: break-word;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -86,15 +90,20 @@ body {
   padding: 3.5rem 1.5rem 3rem;
   max-width: 720px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .hero-glow {
   position: absolute;
   top: -8rem;
   left: 50%;
-  width: 34rem;
-  height: 24rem;
+  /* min() invece di una larghezza fissa: non deve MAI superare il
+     viewport, altrimenti servirebbe overflow:hidden su .hero per
+     nasconderne il bordo — e quello taglierebbe anche il testo vero
+     quando non ci sta in una riga su schermi stretti (bug reale trovato
+     via screenshot, non solo teorico: parole intere sparivano in
+     silenzio invece di andare a capo). */
+  width: min(34rem, 90vw);
+  height: min(24rem, 60vw);
   transform: translateX(-50%);
   background: radial-gradient(circle, var(--accent) 0%, var(--accent-2) 35%, transparent 70%);
   opacity: 0.18;
@@ -111,7 +120,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(1.8rem, 4.2vw, 2.75rem);
+  font-size: clamp(1.5rem, 6vw, 2.75rem);
   line-height: 1.18;
   margin: 0 0 1rem;
   letter-spacing: -0.01em;
