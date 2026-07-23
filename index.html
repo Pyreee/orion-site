@@ -5,53 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Orion — assistente AI personale</title>
   <meta name="description" content="Orion è un assistente AI personale che vive sul tuo PC: voce, chat e integrazioni reali con i tuoi servizi." />
+  <meta property="og:title" content="Orion — assistente AI personale" />
+  <meta property="og:description" content="Voce, chat e integrazioni reali con i tuoi servizi. Gira sul tuo PC." />
+  <meta property="og:image" content="favicon.png" />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
+  <nav class="topnav">
+    <a class="brand" href="#top">
+      <img src="favicon.png" alt="" width="28" height="28" />
+      Orion
+    </a>
+    <a class="btn btn-ghost" href="#download">Scarica</a>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
     <img class="hero-icon" src="favicon.png" alt="" width="96" height="96" />
-    <h1>Orion</h1>
-    <p class="tagline">Il tuo assistente AI personale, sul tuo PC.</p>
+    <h1>Il tuo assistente AI,<br />non un chatbot qualunque.</h1>
     <p class="lead">
       Parla o scrivi, Orion capisce e agisce: risponde, ricorda il contesto e si
-      collega ai servizi che usi già (Google, GitHub, Xbox e altri) per fare
+      collega ai servizi che usi già — Google, GitHub, Xbox e altri — per fare
       cose vere, non solo chiacchierare.
     </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="#download">Scarica per Windows</a>
+      <a class="btn btn-text" href="https://github.com/jarvisdeveloment/orion-releases" rel="noopener">Vedi su GitHub →</a>
+    </div>
   </header>
 
   <main>
-    <section class="downloads" aria-label="Download">
-      <article class="platform-card" id="card-windows">
-        <h2>Windows</h2>
-        <p class="platform-status" id="windows-status">Verifica ultima versione…</p>
-        <a id="windows-download" class="btn btn-primary" href="https://github.com/jarvisdeveloment/orion-releases/releases/latest" rel="noopener">
-          Scarica per Windows
-        </a>
+    <section class="features" aria-label="Cosa fa Orion">
+      <article class="feature-card reveal">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="3"/><path d="M8 16 L8 20 L12 16"/></svg>
+        </span>
+        <h2>Parla o scrivi</h2>
+        <p>Voce naturale o chat testuale, cambi modalità quando ti va: Orion segue la conversazione in entrambe.</p>
       </article>
 
-      <article class="platform-card is-disabled">
-        <h2>macOS</h2>
-        <p class="platform-status">
-          <span class="badge">In sviluppo</span>
-        </p>
-        <button class="btn btn-secondary" type="button" disabled>Presto disponibile</button>
+      <article class="feature-card reveal">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg>
+        </span>
+        <h2>Si collega ai tuoi servizi</h2>
+        <p>Google, GitHub, Xbox e altri: Orion non si limita a rispondere, esegue azioni vere su quello che usi già.</p>
       </article>
 
-      <article class="platform-card is-disabled">
-        <h2>Linux</h2>
-        <p class="platform-status">
-          <span class="badge">In sviluppo</span>
-        </p>
-        <button class="btn btn-secondary" type="button" disabled>Presto disponibile</button>
+      <article class="feature-card reveal">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 L12 12 L16 14"/></svg>
+        </span>
+        <h2>Ricorda il contesto</h2>
+        <p>Le conversazioni restano collegate nel tempo — non riparti mai da zero come con un chatbot qualsiasi.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20 L16 20 M12 16 L12 20"/></svg>
+        </span>
+        <h2>Gira sul tuo PC</h2>
+        <p>Il backend è un processo locale che controlli tu, non un servizio chiuso da qualche parte nel cloud.</p>
       </article>
     </section>
 
-    <p class="channel-note">
-      Dopo l'installazione puoi passare al canale <strong>Beta</strong> in
-      qualsiasi momento dalle Impostazioni dell'app, per provare le novità
-      prima che diventino stabili.
-    </p>
+    <section class="steps" aria-label="Come funziona">
+      <h2 class="section-title">Come funziona</h2>
+      <ol class="steps-list">
+        <li class="reveal">
+          <span class="step-num">1</span>
+          <div>
+            <h3>Scarica e installa</h3>
+            <p>Un unico eseguibile per Windows, pronto in un minuto.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="step-num">2</span>
+          <div>
+            <h3>Collega i tuoi account</h3>
+            <p>Scegli tu quali servizi collegare — anche nessuno, se preferisci restare offline.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="step-num">3</span>
+          <div>
+            <h3>Inizia a chiedere</h3>
+            <p>Parla o scrivi: Orion capisce e agisce da subito.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="downloads" id="download" aria-label="Download">
+      <h2 class="section-title">Scarica Orion</h2>
+      <div class="platform-grid">
+        <article class="platform-card" id="card-windows">
+          <h3>Windows</h3>
+          <p class="platform-status" id="windows-status">Verifica ultima versione…</p>
+          <a id="windows-download" class="btn btn-primary" href="https://github.com/jarvisdeveloment/orion-releases/releases/latest" rel="noopener">
+            Scarica per Windows
+          </a>
+        </article>
+
+        <article class="platform-card is-disabled">
+          <h3>macOS</h3>
+          <p class="platform-status">
+            <span class="badge">In sviluppo</span>
+          </p>
+          <button class="btn btn-secondary" type="button" disabled>Presto disponibile</button>
+        </article>
+
+        <article class="platform-card is-disabled">
+          <h3>Linux</h3>
+          <p class="platform-status">
+            <span class="badge">In sviluppo</span>
+          </p>
+          <button class="btn btn-secondary" type="button" disabled>Presto disponibile</button>
+        </article>
+      </div>
+
+      <p class="channel-note">
+        Dopo l'installazione puoi passare al canale <strong>Beta</strong> in
+        qualsiasi momento dalle Impostazioni dell'app, per provare le novità
+        prima che diventino stabili.
+      </p>
+    </section>
   </main>
 
   <footer>
