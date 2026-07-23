@@ -145,7 +145,7 @@ body {
 /* --- Sections --- */
 
 main {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem 3rem;
 }
@@ -160,17 +160,28 @@ main {
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Tutte le 5 card su una riga sola sopra gli 820px — sotto, si
+     comportano di nuovo come una griglia che va a capo da sola invece
+     di stiparsi illeggibili (stesso errore preso per il testo del
+     hero: mai forzare un layout che non lascia scampo su schermi
+     stretti). */
+  grid-template-columns: repeat(5, 1fr);
   align-items: start;
-  gap: 1.25rem;
+  gap: 1rem;
   margin: 3.5rem 0;
+}
+
+@media (max-width: 820px) {
+  .features {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
 
 .feature-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 14px;
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 .feature-icon {
