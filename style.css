@@ -160,7 +160,7 @@ main {
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   align-items: start;
   gap: 1.25rem;
   margin: 3.5rem 0;
@@ -395,6 +395,7 @@ footer a {
 .features .reveal:nth-child(2) { transition-delay: 0.08s; }
 .features .reveal:nth-child(3) { transition-delay: 0.16s; }
 .features .reveal:nth-child(4) { transition-delay: 0.24s; }
+.features .reveal:nth-child(5) { transition-delay: 0.32s; }
 
 .steps-list .reveal:nth-child(2) { transition-delay: 0.12s; }
 .steps-list .reveal:nth-child(3) { transition-delay: 0.24s; }
