@@ -161,6 +161,7 @@ main {
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: start;
   gap: 1.25rem;
   margin: 3.5rem 0;
 }
