@@ -164,9 +164,9 @@ main {
      comportano di nuovo come una griglia che va a capo da sola invece
      di stiparsi illeggibili (stesso errore preso per il testo del
      hero: mai forzare un layout che non lascia scampo su schermi
-     stretti). */
+     stretti). align-items di default è "stretch": tutte le card di
+     una riga prendono l'altezza della più alta, stessa dimensione. */
   grid-template-columns: repeat(5, 1fr);
-  align-items: start;
   gap: 1rem;
   margin: 3.5rem 0;
 }
